@@ -1,0 +1,174 @@
+@import '../../vendor/Bootstrap/bootstrap';
+
+//Variables Size
+
+$iconBigSize: 4rem;
+$iconBigSize: 1.8rem;
+$iconXSSize: 1.2rem;
+
+//Variables Colors
+
+$whiteColor: #ffffff;
+$blackColor: #000000;
+$pinkColor: #fe60ab:
+$lightPinkColor: #ffb8e2;
+$redColor: #ff7267;
+$greenColor: #538c00;
+$yellowColor: #ffd300;
+
+@mixin centeredPosition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin borderIcon($color) {
+    width: 100px;
+    height: 100px;
+    border: 1px solid $color;
+    border-radius: 50%;
+    padding: 5rem;
+}
+
+@mixin borderIconXS($color) {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $color;
+    border-radius: 50%;
+    padding: 2rem;
+}
+
+.my-container {
+    padding: 0;
+}
+
+.my-brand-icon {
+    font-size: $iconBigSize;
+}
+
+.my-header-text {
+    background: $blackColor;
+}
+
+.my-header-home {
+    background: $greenColor;
+}
+
+.my-nav-icon {
+    font-size: $iconBigSize;
+    width: 100%;
+}
+
+.my-header-mission {
+    background: $greenColor;
+}
+
+.my-header-team {
+    background: $greenColor;
+}
+
+.my-header-portfolio {
+    background: $greenColor;
+}
+
+.my-home-header {
+    background: $yellowColor;
+}
+
+.my-container-home-icon {
+    padding-bottom: 12rem;
+}
+
+.my-home-icon-box {
+    position: relative;
+    @include borderIcon($greenColor);
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.my-home-icon {
+    font-size: $iconBigSize;
+    @include centeredPosition;
+}
+
+.my-portfolio-header {
+    background: $greenColor;
+}
+
+.my-mission-container-progress {
+    padding-bottom: 8rem;
+}
+
+.my-portfolio-container-gallery {
+    padding-bottom: 8rem;
+}
+
+.my-team-header {
+    background: $redColor;
+}
+
+.my-team-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid $pinkColor;
+    margin-bottom: 2rem;
+}
+
+.my-footer-contianer {
+    padding-bottom: 7rem;
+}
+
+@media screen and (min-width: 992px) {
+    .my-container-home-icon {
+        padding-bottom: 0;
+    }
+
+    .my-nav-icon {
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:920px) {
+    .my-team-container {
+        padding-bottom: 8rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .my-home-icon {
+        font-size: $iconXSSize;
+    }
+
+    .my-home-icon-box {
+        @include borderIconXS($greenColor);
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .my-home-icon-header {
+        padding-bottom: 380px;
+    }
+
+    .my-nav-icon {
+        font-size: $iconXSSize;
+    }
+
+    .my-portfolio-container-gallery {
+        padding-bottom: 25rem;
+    }
+
+    .my-portfolio-gallery img {
+        max-width: 300px;
+        margin-bottom: 1rem;
+    }
+
+    .my-team-container {
+        padding-bottom: 25rem;
+    }
+
+    .my-footer-contianer {
+        padding-bottom: 6rem;
+    }
+}
